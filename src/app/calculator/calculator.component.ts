@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
   result: string = '';
+  isDarkTheme = false;
 
   onClick(value: string) {
     this.result += value;
@@ -18,5 +19,8 @@ export class CalculatorComponent {
 
   onCalculate() {
     this.result = eval(this.result);
+  }
+  toggleTheme(): void {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }
